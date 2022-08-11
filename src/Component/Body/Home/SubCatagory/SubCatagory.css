@@ -1,0 +1,17 @@
+.sub-card{
+    z-index: 9;
+    position: relative;
+    top: -60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card.image-full::before{
+    background-color: transparent !important;
+}
+.card-border{
+    border: none !important;
+    border-radius: 0 !important;
+    
+}
