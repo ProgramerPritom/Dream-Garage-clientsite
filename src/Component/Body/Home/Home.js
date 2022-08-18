@@ -22,9 +22,9 @@ const Home = () => {
             <Counter></Counter>
             <QuestionPart></QuestionPart>
             <Review></Review>
-            <Brand></Brand>
             <Blogs></Blogs>
             <Contact></Contact>
+            <Brand></Brand>
             
         </div>
     );

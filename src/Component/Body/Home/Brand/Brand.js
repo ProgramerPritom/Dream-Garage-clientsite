@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 const Brand = () => {
     const settings = {
-        dots: true,
+        // dots: true,
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
