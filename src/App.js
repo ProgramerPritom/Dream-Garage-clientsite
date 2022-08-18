@@ -10,6 +10,8 @@ import About from './Component/Body/About/About';
 import MyProfile from './Component/Body/MyProfile/MyProfile';
 import Login from './Component/Login/Login/Login';
 import SignUp from './Component/Login/SignUp/SignUp';
+import Footer from './Component/Sharer/Footer';
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp/>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
