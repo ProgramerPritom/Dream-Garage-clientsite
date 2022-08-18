@@ -1,84 +1,84 @@
 [
     {
-        "_id":1,
+        
         "productName" : "Wheel",
         "image" : "https://i.ibb.co/MCKwQtX/products-8.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"1509",
+        "quantity" : 650,
+        "minimumQuantity" : 100,
+        "description":"From car to car, wheels and tires perform the same function. The only difference is in size, style, and structure. In order to expand your knowledge base about cars, trucks, and how they work, the basic parts of a car wheel and tire are explained below. When you know more about your vehicle, you can look after it better and keep it running for many years."
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "Oil Filters",
         "image" : "https://i.ibb.co/h972jqC/product-17-1.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"1500",
+        "quantity" : 630,
+        "minimumQuantity" : 80,
+        "description":"Oil is needed to lubricate the many engine components that work together to make a vehicle run. Without oil the engine would quickly overheat and parts would wear out prematurely. But every time oil circulates through the engine it can become contaminated."
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "Turbine Engine",
         "image" : "https://i.ibb.co/C22xQ9N/product-13-1.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"2897",
+        "quantity" : 612,
+        "minimumQuantity" : 80,
+        "description":"Most gas turbines operate on an open cycle in which air is taken from the atmosphere, compressed in a centrifugal or axial-flow compressor, and then fed into a combustion chamber. Here, fuel is added and burned at an essentially constant pressure with a portion of the air."
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "HeadLights",
         "image" : "https://i.ibb.co/Bj9j0yL/product-3-1.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"1125",
+        "quantity" : 550,
+        "minimumQuantity" : 80,
+        "description":"A headlamp is a lamp attached to the front of a vehicle to illuminate the road ahead. Headlamps are also often called headlights, but in the most precise usage, headlamp is the term for the device itself and headlight is the term for the beam of light produced and distributed by the device."
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "GT-R Brakes",
         "image" : "https://i.ibb.co/nPgkGzq/product-2-1.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"907",
+        "quantity" : 700,
+        "minimumQuantity" : 120,
+        "description":"Disc brakes consist of a brake rotor which is attached directly to the wheel. Hydraulic pressure from the master cylinder causes a caliper (which holds the brake pads just outside the rotor) to squeeze the brake pads on either side of the rotor. "
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "Spark Plugs",
         "image" : "https://i.ibb.co/6RLLv6j/product-1-1.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"2147",
+        "quantity" : 560,
+        "minimumQuantity" : 100,
+        "description":"without a spark, your car won't start—or go anywhere. And because spark plug health is directly linked to engine performance, it stands to reason weak or bad spark plugs lead to problems, be it issues with cold-starting or misfires during acceleration.your vehicle can see a drop in fuel economy."
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "Hyundai Tires",
         "image" : "https://i.ibb.co/qCsX6tM/19-1000x1000.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"1677",
+        "quantity" : 660,
+        "minimumQuantity" : 110,
+        "description":"The selection of tires for your Hyundai must be made carefully, with consideration for several factors, including the type of car, the dimensions, and the manner in which the vehicle is used, with respect to the routes that are taken on a daily basis."
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "Bearing Pod",
         "image" : "https://i.ibb.co/Q8xf5WB/11-1000x1000.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"1239",
+        "quantity" : 580,
+        "minimumQuantity" : 120,
+        "description":"A wheel bearing is a set of steel balls held together in a metal ring, called a race. At the center of your wheels, there is a hollow piece of metal, called a hub. The wheel bearings fit tightly inside this hub, and ride on a metal axle shaft, helping reduce friction when the wheel spins."
     },
     {
-        "_id":1,
-        "productName" : "Wheel",
+        
+        "productName" : "Car Disc Pad",
         "image" : "https://i.ibb.co/6HcM3cY/2-6-618x578.png",
-        "price" :"99",
-        "quantity" : 199,
-        "minimumQuantity" : 50,
-        "description":"This is description about productName"
+        "price" :"2399",
+        "quantity" : 780,
+        "minimumQuantity" : 70,
+        "description":"Brake discs attached to your car’s wheels work in combination with the brake pads to slow down your car by applying friction. Faulty brake discs can pose a serious risk to you and other road users – if you need to replace them."
     }
     
 
