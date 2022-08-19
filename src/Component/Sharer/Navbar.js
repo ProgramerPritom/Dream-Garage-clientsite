@@ -1,8 +1,22 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Loading from './Loading';
 import './Navbar.css';
 
 const Navbar = () => {
+    
+    const [user, loading, error] = useAuthState(auth);
+    if (loading) {
+        return <Loading></Loading>
+    }
+    
+    const logout = () =>{
+        signOut(auth);
+    }
+
     return (
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -33,9 +47,21 @@ const Navbar = () => {
             </div>
             <div class="navbar-end">
             
-            <div class="login-btn grid h-8 card bg-base-300 rounded-box place-items-center"><Link to='/login'>Login</Link></div> 
+            {/* <div class="login-btn grid h-8 card bg-base-300 rounded-box place-items-center"><Link to='/login'>Login</Link></div> 
             <div class="divider sm:divider-horizontal">|</div> 
-            <div class="login-btn grid h-8 card bg-base-300 rounded-box place-items-center"><Link to='/signup'>Sign Up</Link></div>
+            <div class="login-btn grid h-8 card bg-base-300 rounded-box place-items-center"><Link to='/signup'>Sign Up</Link></div> */}
+            <ul class="menu menu-horizontal p-0">
+            <li> {
+                    user ? <Link to='/dashboard'>Dashboard</Link> :<Link to='/login'>Login</Link> 
+                 }
+                 </li>
+                 <li><div class="divider sm:divider-horizontal">|</div></li>
+                 <li>
+                 {
+                    user ? <button onClick={logout} class="">Log Out</button>:<Link to='/signup'>Sign Up</Link>
+                 }
+                 </li> 
+            </ul>
             
             </div>
             </div>

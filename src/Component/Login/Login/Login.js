@@ -2,17 +2,37 @@ import React from 'react';
 import './Login.css';
 import { FaArrowRight } from "react-icons/fa";
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const Login = () => {
-
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+      const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+      const navigate = useNavigate();
     const { register, formState: { errors }, handleSubmit } = useForm();
 
+    if (user || gUser) {
+        navigate('/home');
+    }
 
     let signInError;
+    if (error || gError) {
+        signInError = <p className='text-red-500 py-4 text-center'> {error?.message || gError?.message}</p>
+        
+    }
 
+
+    const handleGoogleAuth = () =>{
+        signInWithGoogle();
+    }
     const onSubmit = data => {
-        console.log(data);
+        signInWithEmailAndPassword(data.email, data.password);
         
         
     }
@@ -105,7 +125,7 @@ const Login = () => {
                         <p className='text-center text-sm'>New on Dream Motors ?  <Link className='text-primary font-bold' to='/signup'>Create an account</Link></p>
                 
                 <div className="divider">OR</div>
-                <button onClick=""
+                <button onClick={handleGoogleAuth}
                 className="btn btn-outline">Continue with Google</button>
                     </div>
                     </div>

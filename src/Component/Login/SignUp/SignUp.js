@@ -2,16 +2,44 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import Loading from '../../Sharer/Loading';
 
 const SignUp = () => {
 
-
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+      const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+      const navigate = useNavigate()
     const { register, formState: { errors }, handleSubmit } = useForm();
 
+    if (user || gUser) {
+        navigate('/login');
+    }
 
     let signInError;
+    if (error || gError) {
+        signInError = <p className='text-red-500 py-4 text-center'> {error?.message || gError?.message}</p>
+        
+    }
+
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
+
+
+
+    const handleGoogleAuth = () =>{
+        signInWithGoogle();
+    }
+
     const onSubmit = async data =>{
-        console.log(data);
+        createUserWithEmailAndPassword(data.email, data.password);
     }
 
     return (
@@ -123,7 +151,7 @@ const SignUp = () => {
                         <p className='text-center text-sm'>Already have account ?  <Link className='text-primary font-bold' to='/login'>Please Login</Link></p>
                 
                         <div className="divider">OR</div>
-                        <button onClick=""
+                        <button onClick={handleGoogleAuth}
                         className="btn btn-outline">Continue with Google</button>
 
                     </div>

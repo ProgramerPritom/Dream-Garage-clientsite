@@ -11,6 +11,8 @@ import MyProfile from './Component/Body/MyProfile/MyProfile';
 import Login from './Component/Login/Login/Login';
 import SignUp from './Component/Login/SignUp/SignUp';
 import Footer from './Component/Sharer/Footer';
+import DetailProduct from './Component/Body/Products/ManageProduct/DetailProduct';
+import RequireAuth from './Component/Login/Require/RequireAuth';
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
+        <Route path='/detailProduct/:id' element={<RequireAuth><DetailProduct></DetailProduct></RequireAuth>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
