@@ -61,6 +61,7 @@ const Navbar = () => {
                     user ? <button onClick={logout} class="">Log Out</button>:<Link to='/signup'>Sign Up</Link>
                  }
                  </li> 
+                 
             </ul>
             
             </div>
