@@ -97,7 +97,7 @@ const Login = () => {
                         <label class="label">
                             <span class="label-text">Password</span>
                         </label>
-                        <input type="text" placeholder="password" class="input input-bordered" 
+                        <input type="password" placeholder="password" class="input input-bordered" 
                         {...register("password",  {
                             minLength: {
                               value: 6,

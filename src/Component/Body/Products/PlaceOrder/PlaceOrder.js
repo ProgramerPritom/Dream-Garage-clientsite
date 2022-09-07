@@ -33,7 +33,7 @@ const PlaceOrder = ({data, value, updatePrice}) => {
             .then(res => res.json())
             .then(data => {
                 toast.success('Confirm Order successfully, Fill up Payment method to get your Product');
-                navigate('/home');
+                navigate('/dashboard/myorders');
                 // console.log(data)
             })
         }
