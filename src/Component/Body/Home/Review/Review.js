@@ -29,7 +29,7 @@ const Review = () => {
       };
     return (
         <div>
-            <h3 className='text-3xl text-center font-bold text-base-800 my-4'>See What is Our Client say</h3>
+            <h3 className='text-3xl text-center font-bold text-orange-500 my-4'>See What is Our Client say</h3>
             <div>
                 
                 <Slider {...settings}>

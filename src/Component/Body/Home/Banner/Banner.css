@@ -2,3 +2,23 @@
     background-image: url('file:///C:/Users/badru/Downloads/Dream%20motor%20garage/slider-2.webp');
     
 }
+#basicBtn{
+    background-color: #e9af3c !important;
+    color: #000000 !important;
+    border: none !important;
+    border-radius: 25px !important;
+    /* padding: 25px !important; */
+    text-align: center !important;
+    font-weight: 700;
+    transition: all ease-in-out 0.3s;
+}
+#basicBtn:hover{
+    background-color: #D8D8D8 !important;
+    color: #000000 !important;
+    border: none!important;
+    border-radius: 25px !important;
+    /* padding: 25px !important; */
+    text-align: center !important;
+    font-weight: 700;
+    transition: all ease-in-out 0.3s;
+}

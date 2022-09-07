@@ -29,7 +29,7 @@ const Product = ({product}) => {
                         <p className="text-center font-semibold pb-3">Minimum Orders: <span className='font-bold underline text-xl'>{minimumQuantity} Pics</span></p>
                         <p>{description === 140 ? seeDescription : seeMore}</p>
                         <div class="card-actions">
-                        <button class="btn btn-primary w-full" onClick={()=>handleAddCart(_id)}>Add Cart</button>
+                        <button id='basicBtn' class="btn btn-primary w-full" onClick={()=>handleAddCart(_id)}>Add Cart</button>
                         </div>
                     </div>
                     </div>

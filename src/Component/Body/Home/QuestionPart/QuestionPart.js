@@ -4,7 +4,7 @@ const QuestionPart = () => {
     return (
         <div>
             <div className="question-area">
-                <h2 className="text-3xl font-bold text-center my-4">
+                <h2 className="text-3xl font-bold text-orange-500 text-center my-4">
                     Most Expected Question!
                 </h2>
             </div>

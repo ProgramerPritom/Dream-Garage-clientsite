@@ -21,7 +21,7 @@ const BestProduct = ({product}) => {
                 </div>
                 <p>{description === 150 ? seeDescription : seeMore}</p>
                 <div class="card-actions">
-                <button onClick={()=>handleAddCart(_id)} class="btn btn-primary">Buy Now</button>
+                <button id='basicBtn' onClick={()=>handleAddCart(_id)} class="btn btn-primary">Show</button>
                 </div>
             </div>
             </div>

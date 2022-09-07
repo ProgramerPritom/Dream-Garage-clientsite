@@ -5,7 +5,7 @@ const AboutCompany = () => {
     return (
         <div>
             <div className="about-tx my-8">
-                <h2 className="text-center text-4xl text-purple-500 font-semibold">About Company</h2>
+                <h2 className="text-center text-4xl text-orange-500 font-semibold">About Company</h2>
                 <p className='text-center text-2xl font-semibold'>Find Our Company Grow</p>
             </div>
             <div class="hero min-h-screen">
@@ -21,7 +21,7 @@ const AboutCompany = () => {
                     
                     
                 </div>
-                <button class="btn btn-primary">Get Started</button>
+                <button id='basicBtn' class="btn btn-primary">Contact Us</button>
                 </div>
             </div>
             </div>

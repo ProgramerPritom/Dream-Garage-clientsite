@@ -27,6 +27,7 @@ import ManageProduct from './Component/Body/Dashboard/ManageProduct';
 import RequireAdmin from './Component/Login/Require/RequireAdmin';
 import ManageOrders from './Component/Body/Dashboard/ManageOrders';
 import Payment from './Component/Body/Dashboard/Payment';
+import NotFoundPage from './Component/Sharer/NotFoundPage';
 
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
 
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp/>}></Route>
+        <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

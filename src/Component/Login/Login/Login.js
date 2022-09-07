@@ -128,7 +128,7 @@ const Login = () => {
                         <p className='text-center text-sm'>New on Dream Motors ?  <Link className='text-primary font-bold' to='/signup'>Create an account</Link></p>
                 
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleAuth}
+                <button id='basicBtn' onClick={handleGoogleAuth}
                 className="btn btn-outline">Continue with Google</button>
                     </div>
                     </div>

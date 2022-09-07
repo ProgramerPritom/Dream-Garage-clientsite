@@ -74,7 +74,7 @@ const PlaceOrder = ({data, value, updatePrice}) => {
 
 
                 <div class="modal-action">
-                <label onClick={handleConfirmOrder} for="my-modal" class="btn btn-primary">Confirm Order</label>
+                <label onClick={handleConfirmOrder} id='basicBtn' for="my-modal" class="btn btn-primary">Confirm Order</label>
                 <label for="my-modal" class="btn">Cancel</label>
                 </div>
             </div>

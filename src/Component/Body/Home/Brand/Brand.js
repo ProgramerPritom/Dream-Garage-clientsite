@@ -16,58 +16,74 @@ const Brand = () => {
       };
     return (
         <div>
-            <h4 className="text-4xl text-center text-green-500 font-bold my-4">Sponsser Company logo area</h4>
+            <h4 className="text-4xl text-center text-orange-500 font-bold my-4">Our Valuable Sponser</h4>
             <div>
         <Slider {...settings}>
-          <div>
+          <div className='my-3'>
           <div class="avatar">
-            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://placeimg.com/192/192/people" />
+            <div class="w-24 rounded-full">
+                <img src="https://i.ibb.co/s2wmGbS/download5.png
+" />
             </div>
             </div>
           </div>
 
 
-          <div>
+          <div className='my-3'>
           <div class="avatar">
-            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://placeimg.com/192/192/people" />
+            <div class="w-24 rounded-full ">
+                <img src="https://i.ibb.co/HXKnFZG/download6.png
+" />
             </div>
             </div>
           </div>
 
 
-          <div>
+          <div className='my-3'>
           <div class="avatar">
-            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://placeimg.com/192/192/people" />
+            <div class="w-24 rounded-full ">
+                <img src="https://i.ibb.co/JBjN97L/image5.png
+" />
             </div>
             </div>
           </div>
 
 
-          <div>
+          <div className='my-3'>
           <div class="avatar">
-            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://placeimg.com/192/192/people" />
+            <div class="w-24 rounded-full ">
+                <img src="https://i.ibb.co/CJVF5NW/images1.jpg
+" />
             </div>
             </div>
           </div>
 
 
-          <div>
+          <div className='my-3'>
           <div class="avatar">
-            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://placeimg.com/192/192/people" />
+            <div class="w-24 rounded-full ">
+                <img src="https://i.ibb.co/6g4rRZQ/images2.jpg
+" />
             </div>
             </div>
           </div>
 
 
-          <div>
+          <div className='my-3'>
           <div class="avatar">
-            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://placeimg.com/192/192/people" />
+            <div class="w-24 rounded-full ">
+                <img src="https://i.ibb.co/HCgwTXY/images3.jpg
+" />
+            </div>
+            </div>
+          </div>
+
+
+          <div className='my-3'>
+          <div class="avatar">
+            <div class="w-24 rounded-full ">
+                <img src="https://i.ibb.co/17dthdL/images4.png
+" />
             </div>
             </div>
           </div>

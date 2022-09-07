@@ -15,7 +15,7 @@ const BestSeller = () => {
     return (
         <div>
             <div className="best-sells-text my-4">
-                <h2 className="text-center text-purple-500 font-semibold text-2xl">Best Sells Products</h2>
+                <h2 className="text-center text-orange-500 font-semibold text-2xl">Best Sells Products</h2>
                 <p className="text-xl text-center">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, possimus?
                 </p>

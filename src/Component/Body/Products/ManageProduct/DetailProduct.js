@@ -126,7 +126,7 @@ const DetailProduct = () => {
 
 
                 <div class="card-actions justify-end">
-                <label for="my-modal" onClick={handlePlaceOrder} class="btn btn-primary">Process to Order</label>
+                <label for="my-modal" id='basicBtn' onClick={handlePlaceOrder} class="btn btn-primary">Process to Order</label>
                 </div>
             </div>
             </div>
