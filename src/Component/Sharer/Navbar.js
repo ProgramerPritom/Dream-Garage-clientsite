@@ -15,6 +15,7 @@ const Navbar = () => {
     
     const logout = () =>{
         signOut(auth);
+        localStorage.removeItem('accessToken');
     }
 
     return (
@@ -33,7 +34,8 @@ const Navbar = () => {
                 <li><Link to='/myprofile'>My Profile</Link></li>
                 </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                {/* <a class="btn btn-ghost normal-case text-xl">daisyUI</a> */}
+                <h3 className='text-2xl font-bold'><Link to='/'>Dream G</Link></h3>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">

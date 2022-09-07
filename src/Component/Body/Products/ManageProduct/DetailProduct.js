@@ -12,7 +12,8 @@ const DetailProduct = () => {
     const [value,setValue] = useState(0); 
     const [updatePrice, setUpdatePrice] = useState(0);
     const {id} = useParams();
-     const [data,setData] = useState([])
+    const [data,setData] = useState([]);
+    
     const url = `http://localhost:5000/products/${id}`;
     useEffect(()=>{
         fetch(url)
@@ -58,7 +59,7 @@ const DetailProduct = () => {
     }
     const handlePlaceOrder = () =>{
         // navigate('/placeOrder');
-        console.log(data,updatePrice,value)
+        // console.log(data,updatePrice,value)
         
     }
 

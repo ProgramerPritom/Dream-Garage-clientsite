@@ -23,6 +23,10 @@ import AddProduct from './Component/Body/Dashboard/AddProduct';
 import ManageProducts from './Component/Body/Dashboard/ManageProducts';
 import AllUser from './Component/Body/Dashboard/AllUser';
 import DashboardCard from './Component/Body/Dashboard/DashboardCard';
+import ManageProduct from './Component/Body/Dashboard/ManageProduct';
+import RequireAdmin from './Component/Login/Require/RequireAdmin';
+import ManageOrders from './Component/Body/Dashboard/ManageOrders';
+import Payment from './Component/Body/Dashboard/Payment';
 
 
 function App() {
@@ -47,9 +51,12 @@ function App() {
           <Route path='mydashboardprofile' element={<MyProfileDashboard></MyProfileDashboard>}></Route>
           <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
-          <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
-          <Route path='manageproduct' element={<ManageProducts></ManageProducts>}></Route>
-          <Route path='users' element={<AllUser></AllUser>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
+          <Route path='managealloders' element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
+          <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='manageproduct' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
+          <Route path='manageProduct/:id' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
+          <Route path='users' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
           
         </Route>
 

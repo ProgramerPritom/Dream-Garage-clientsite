@@ -34,7 +34,7 @@ const PlaceOrder = ({data, value, updatePrice}) => {
             .then(data => {
                 toast.success('Confirm Order successfully, Fill up Payment method to get your Product');
                 navigate('/home');
-                console.log(data)
+                // console.log(data)
             })
         }
         

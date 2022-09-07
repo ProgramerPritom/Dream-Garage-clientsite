@@ -1,9 +1,20 @@
 import React from 'react';
 import './Review.css';
 import Slider from "react-slick";
+import { useQuery } from 'react-query';
+import ReviewItem from './ReviewItem';
+import Loading from '../../../Sharer/Loading';
 
 
 const Review = () => {
+
+    const { isLoading, error, data : reviews } = useQuery('reviews', () =>
+     fetch('http://localhost:5000/reviews').then(res => res.json()))
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
     const settings = {
         className: "center",
         centerMode: true,
@@ -18,93 +29,19 @@ const Review = () => {
       };
     return (
         <div>
-            <h3 className='text-5xl text-center font-bold text-purple-400 my-4'>This is Review area</h3>
+            <h3 className='text-3xl text-center font-bold text-base-800 my-4'>See What is Our Client say</h3>
             <div>
                 
                 <Slider {...settings}>
                     
-                <div>
-                <div class="card w-96 bg-base-100 shadow-xl my-4">
-                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                    {
+                        reviews.map(review => <ReviewItem key={review._id} review ={review}></ReviewItem>)
+                    }
+
+                
 
 
-                <div>
-                <div class="card w-96 bg-base-100 shadow-xl my-4">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title">Shoes!</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                        </div>
-                </div>
-
-
-                <div>
-                <div class="card w-96 bg-base-100 shadow-xl my-4">
-                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div>
-                <div class="card  w-96 bg-base-100 shadow-xl my-4">
-                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div>
-                <div class="card  w-96 bg-base-100 shadow-xl my-4">
-                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div>
-                <div class="card  w-96 bg-base-100 shadow-xl my-4">
-                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                
 
 
                 </Slider>

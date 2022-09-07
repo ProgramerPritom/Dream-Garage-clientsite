@@ -1,14 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import auth from '../../../firebase.init';
+import Loading from '../../Sharer/Loading';
 
 const AddReview = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
-
+    const { register, formState: { errors }, handleSubmit,reset } = useForm();
+    const [user, loading, error] = useAuthState(auth);
+    const [ratting,setRatting] = useState(0);
     
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     const onSubmit = data => {
+        const review = {
+            email : user.email,
+            ratting : ratting,
+            reviewDescription : data.reviewDescription
+
+        }
+        fetch('http://localhost:5000/reviews',{
+            method: 'POST',
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(review)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            toast('Thank for giving your valuable Reviews');
+            reset();
+        })
         
-        console.log(data)
         
     }
     return (
@@ -22,11 +48,11 @@ const AddReview = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <div class="form-control">
             <div class="rating">
-            <input type="radio" name="rating-2" value='1' class="mask mask-star-2 bg-orange-700" {...register("ratting1", { required: true })} />
-            <input type="radio" name="rating-2" value='2' class="mask mask-star-2 bg-orange-700" {...register("ratting2", { required: true })}/>
-            <input type="radio" name="rating-2" value='3' class="mask mask-star-2 bg-orange-700" {...register("ratting3", { required: true })}/>
-            <input type="radio" name="rating-2" value='4' class="mask mask-star-2 bg-orange-700" {...register("ratting4", { required: true })}/>
-            <input type="radio" name="rating-2" value='5' class="mask mask-star-2 bg-orange-700" {...register("ratting5", { required: true })}/>
+            <input type="radio" name="rating-2" value='1' class="mask mask-star-2 bg-orange-700" onClick={() =>setRatting(1)}/>
+            <input type="radio" name="rating-2" value='2' class="mask mask-star-2 bg-orange-700" onClick={() =>setRatting(2)}/>
+            <input type="radio" name="rating-2" value='3' class="mask mask-star-2 bg-orange-700" onClick={() =>setRatting(3)}/>
+            <input type="radio" name="rating-2" value='4' class="mask mask-star-2 bg-orange-700" onClick={() =>setRatting(4)}/>
+            <input type="radio" name="rating-2" value='5' class="mask mask-star-2 bg-orange-700" onClick={() =>setRatting(5)}/>
             
             </div>
             </div>
@@ -36,7 +62,7 @@ const AddReview = () => {
             <label class="label">
                 <span class="label-text">Description</span>
             </label>
-            <textarea class="textarea textarea-bordered" placeholder="Add Review Description"></textarea>
+            <textarea class="textarea textarea-bordered" placeholder="Add Review Description" {...register("reviewDescription", { required: true })}></textarea>
             </div>
 
             <div class="form-control mt-6">

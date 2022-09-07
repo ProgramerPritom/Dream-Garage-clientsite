@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 import Loading from '../../Sharer/Loading';
-import { BsPencilSquare } from "react-icons/bs";
-import { FaTrashAlt } from "react-icons/fa";
+
+import DeleteProducts from './DeleteProducts';
+import ProductRow from './ProductRow';
 
 const ManageProducts = () => {
-
-    const { isLoading, error, data: manageProducts } = useQuery('manageProduct',()=>fetch('http://localhost:5000/products').then(res => res.json()))
-
+    const [deleteProduct, setDeleteProduct] = useState(null);
+    const { isLoading, error, data: manageProducts, refetch } = useQuery('manageProduct',()=>fetch('http://localhost:5000/products').then(res => res.json()))
+    const navigate = useNavigate();
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -16,13 +18,13 @@ const ManageProducts = () => {
         errorMsg = error.message;
     }
 
-    const handleEdit = () =>{
-        console.log('edit clicked')
+    const handleEdit = (id) =>{
+        navigate(`/dashboard/manageProduct/${id}`);
+        // console.log('edit clicked')
+        // console.log(id)
     }
 
-    const handleDelete = () =>{
-        console.log('delete clicked')
-    }
+    
     return (
         <div class="overflow-x-auto w-full">
             <table class="table w-full">
@@ -41,39 +43,14 @@ const ManageProducts = () => {
                 <tbody>
                 {/* <!-- row 1 --> */}
                 {
-                  manageProducts.map((manageProduct,index) => <>
-                  <tr>
-                    <th>
-                    {index + 1}
-                    </th>
-                    <td>
-                    <div class="flex items-center space-x-3">
-                        <div class="avatar">
-                        <div class="mask mask-squircle w-12 h-12">
-                            <img src={manageProduct.image} />
-                        </div>
-                        </div>
-                        <div>
-                        <div class="font-bold">{manageProduct.name}</div>
-                        
-                        </div>
-                    </div>
-                    </td>
-                    <td>
-                    {manageProduct.quantity} pics
-                    
-                    </td>
-                    <td>${manageProduct.price}</td>
-                    <th>
-                    <div className='flex justify-around'>
-                        <div className='btn btn-ghost' onClick={handleEdit}><BsPencilSquare></BsPencilSquare></div>
-                        <div className='btn btn-ghost' onClick={handleDelete}><FaTrashAlt></FaTrashAlt></div>
-                    </div>
-                    </th>
-                </tr>
-                  </>)  
+                  manageProducts.map((manageProduct,index) => <ProductRow manageProduct={manageProduct} index={index} setDeleteProduct={setDeleteProduct} handleEdit={handleEdit}></ProductRow>)  
                 }
-                
+
+
+
+
+                {deleteProduct&& <DeleteProducts deleteProduct={deleteProduct} isLoading={isLoading} refetch={refetch} setDeleteProduct={setDeleteProduct}></DeleteProducts>}
+
                 {errorMsg}
                 
                 

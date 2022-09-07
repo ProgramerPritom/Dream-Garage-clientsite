@@ -1,15 +1,16 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Sharer/Loading';
 
 const MyOrders = () => {
     const [user, loading, error] = useAuthState(auth);
-    const {data: orders, isLoading, refetch} = useQuery('users', ()=>fetch(`http://localhost:5000/orders?userMail=${user.email}`,{
+    const {data: orders, isLoading, refetch} = useQuery('users', ()=>fetch(`http://localhost:5000/bookingOrders?userMail=${user.email}`,{
         method: 'GET',
         headers: {
-            
+            'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res=>res.json()));
     // console.log(orders)
@@ -58,9 +59,11 @@ const MyOrders = () => {
                     
                     </td>
                     <td>${order.price}</td>
-                    <th>
-                    <button class="btn btn-ghost btn-xs">details</button>
-                    </th>
+                    <td>
+                        {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}> <button  class="btn btn-ghost btn-xs">Pay</button></Link>}
+                        {(order.price && order.paid) && <Link to={''}> <button  class="btn btn-ghost btn-xs">Pending</button></Link>}
+                        </td>
+                    
                 </tr>
                 </>)
                 }

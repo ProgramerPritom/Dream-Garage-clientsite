@@ -5,6 +5,8 @@ import { FaArrowRight } from "react-icons/fa";
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Sharer/Loading';
+import useToken from '../../hooks/useToken';
+import { useState } from 'react';
 
 const SignUp = () => {
 
@@ -17,8 +19,11 @@ const SignUp = () => {
       const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
       const navigate = useNavigate()
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [pUser,setPUser] = useState('');
+    const [token] = useToken(user || gUser || pUser);
+    
 
-    if (user || gUser) {
+    if (token) {
         navigate('/login');
     }
 
@@ -39,7 +44,16 @@ const SignUp = () => {
     }
 
     const onSubmit = async data =>{
+
         createUserWithEmailAndPassword(data.email, data.password);
+        setPUser({
+            UserName : data.name,
+            email : data.email,
+            password : data.password
+        })
+
+
+
     }
 
     return (
