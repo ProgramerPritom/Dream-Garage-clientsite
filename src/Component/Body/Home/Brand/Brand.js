@@ -13,10 +13,36 @@ const Brand = () => {
         autoplaySpeed: 2000,
         cssEase: "linear",
         useCSS:true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 1,
+              infinite: true,
+              
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
     return (
         <div>
-            <h4 className="text-4xl text-center text-orange-500 font-bold my-4">Our Valuable Sponser</h4>
+            <h4 className="text-4xl text-center text-orange-500 font-semibold my-4">Our Valuable Sponser</h4>
             <div>
         <Slider {...settings}>
           <div className='my-3'>

@@ -19,7 +19,7 @@ const AllUser = () => {
     }
     return (
         <div>
-            <h2 className="text-center text-3xl font-bold">All User Details {users.length}</h2>
+            <h2 className="text-center text-3xl text-yellow-600 font-bold">All User Details {users.length}</h2>
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     {/* <!-- head --> */}

@@ -26,7 +26,13 @@ const ManageProducts = () => {
 
     
     return (
-        <div class="overflow-x-auto w-full">
+
+        <div>
+            <div>
+                <h3 className="text-center font-semibold text-3xl my-4 text-yellow-700">Manage All Products</h3>
+            </div>
+
+            <div class="overflow-x-auto w-full">
             <table class="table w-full">
                 {/* <!-- head --> */}
                 <thead>
@@ -60,6 +66,7 @@ const ManageProducts = () => {
                 
             </table>
             </div>
+        </div>
     );
 };
 

@@ -175,7 +175,7 @@ const AddProduct = () => {
 
 
       <div className='my-4'>
-      <input type="submit" className='btn btn-primary'/>
+      <input type="submit" id='basicBtn' className='btn btn-primary'/>
       </div>
     </form>
         </div>

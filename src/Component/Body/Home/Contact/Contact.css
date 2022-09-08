@@ -2,3 +2,21 @@
     width: 700px !important;
     
 }
+@media screen and (max-width: 480px) {
+    #contact-img{
+        width: 100%;
+    }
+    #contact-body{
+        width: 100%;
+    }
+}
+@media screen and (min-width:481px) and (max-width: 860px) {
+    #contact-img{
+        width: 100%;
+    }
+    #contact-body{
+        text-align: center;
+        padding: 30px;
+        width: 100%;
+    }
+}

@@ -67,6 +67,10 @@ const ManageProduct = () => {
 
     return (
         <div>
+            
+
+
+            <div>
             <div>
                 <h3 className="text-2xl font-semibold text-center ">Product Name : <span className='text-yellow-600 font-bold underline'>{productDetails.productName}</span></h3>
             </div>
@@ -113,6 +117,7 @@ const ManageProduct = () => {
             </div>
             <div>
                 <button className='btn btn-primary' onClick={handleSubmitUpdate}>Submit</button>
+            </div>
             </div>
         </div>
     );

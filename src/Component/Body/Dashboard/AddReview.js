@@ -40,7 +40,7 @@ const AddReview = () => {
     return (
         <div>
             <div class="card w-full bg-base-100 shadow-xl">
-            <h3 className="text-center text-3xl font-bold">
+            <h3 className="text-center text-3xl font-semibold text-yellow-700">
                 Place a review about Products
             </h3>
             

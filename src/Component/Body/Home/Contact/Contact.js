@@ -5,12 +5,12 @@ const Contact = () => {
     return (
         <div className='my-12'>
             <div className="contact-text">
-                <h2 className="text-4xl text-center my-4 font-bold text-orange-500">Contact Us</h2>
+                <h2 className="text-4xl text-center my-4 font-semibold text-orange-500">Contact Us</h2>
             </div>
             <div className="contact-body">
             <div class="card lg:card-side card-compact w-full bg-base-100 ">
-            <figure className='w-2/4'><img className='contact-img' src="https://aim.gov.in/images/contact-banner.jpg" alt="Album"/></figure>
-                <div class="card-body w-1/2">
+            <figure id='contact-img' className='w-2/4'><img className='contact-img' src="https://aim.gov.in/images/contact-banner.jpg" alt="Album"/></figure>
+                <div id='contact-body' class="card-body w-1/2">
                     <form action="">
                         <label htmlFor="">Full Name</label>
                         <input className='mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500' type="text" name="name" id="" />
