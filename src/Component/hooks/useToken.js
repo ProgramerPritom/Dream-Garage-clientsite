@@ -12,7 +12,7 @@ const useToken = (user) => {
             email : email
         }
         if (email) {
-            fetch(`http://localhost:5000/user/${email}`,{
+            fetch(`https://whispering-meadow-28819.herokuapp.com/user/${email}`,{
                 method: 'PUT',
                 body : JSON.stringify(currentUser),
                 headers: {

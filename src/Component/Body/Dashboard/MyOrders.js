@@ -9,7 +9,7 @@ import MyOrderRow from './MyOrderRow';
 
 const MyOrders = () => {
     const [user, loading, error] = useAuthState(auth);
-    const {data: orders, isLoading, refetch} = useQuery('users', ()=>fetch(`http://localhost:5000/bookingOrders?userMail=${user.email}`,{
+    const {data: orders, isLoading, refetch} = useQuery('users', ()=>fetch(`https://whispering-meadow-28819.herokuapp.com/bookingOrders?userMail=${user.email}`,{
         method: 'GET',
         headers: {
             'authorization' : `Bearer ${localStorage.getItem('accessToken')}`

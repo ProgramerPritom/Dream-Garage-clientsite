@@ -4,7 +4,7 @@ import { FaTrashAlt } from "react-icons/fa";
 
 const MyOrderRow = ({order,index,refetch}) => {
     const handleRemove = (id) =>{
-        fetch(`http://localhost:5000/bookingOrders/${id}`,{
+        fetch(`https://whispering-meadow-28819.herokuapp.com/bookingOrders/${id}`,{
             method: 'DELETE',
         })
         .then(res => res.json())

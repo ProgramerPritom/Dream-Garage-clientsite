@@ -8,7 +8,7 @@ import ProductRow from './ProductRow';
 
 const ManageProducts = () => {
     const [deleteProduct, setDeleteProduct] = useState(null);
-    const { isLoading, error, data: manageProducts, refetch } = useQuery('manageProduct',()=>fetch('http://localhost:5000/products').then(res => res.json()))
+    const { isLoading, error, data: manageProducts, refetch } = useQuery('manageProduct',()=>fetch('https://whispering-meadow-28819.herokuapp.com/products').then(res => res.json()))
     const navigate = useNavigate();
     if (isLoading) {
         return <Loading></Loading>

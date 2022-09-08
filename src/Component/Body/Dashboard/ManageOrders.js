@@ -6,7 +6,7 @@ import ManageAllOrdersRow from './ManageAllOrdersRow';
 
 const ManageOrders = () => {
 
-    const {data: manageOrders, isLoading,refetch} = useQuery("manageAllOders", ()=> fetch('http://localhost:5000/orders',{
+    const {data: manageOrders, isLoading,refetch} = useQuery("manageAllOders", ()=> fetch('https://whispering-meadow-28819.herokuapp.com/orders',{
         method: 'GET',
         headers : {
             'authorization' : `Bearer ${localStorage.getItem('accessToken')}`

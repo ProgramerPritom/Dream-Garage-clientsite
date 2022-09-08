@@ -9,7 +9,7 @@ import Loading from '../../../Sharer/Loading';
 const Review = () => {
 
     const { isLoading, error, data : reviews } = useQuery('reviews', () =>
-     fetch('http://localhost:5000/reviews').then(res => res.json()))
+     fetch('https://whispering-meadow-28819.herokuapp.com/reviews').then(res => res.json()))
 
     if (isLoading) {
         return <Loading></Loading>

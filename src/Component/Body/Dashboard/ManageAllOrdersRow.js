@@ -8,7 +8,7 @@ const ManageAllOrdersRow = ({manageOrder,index,refetch}) => {
         const shipped = {
             shipped: true
         }
-        fetch(`http://localhost:5000/bookingOrders/${_id}`,{
+        fetch(`https://whispering-meadow-28819.herokuapp.com/bookingOrders/${_id}`,{
                 method: 'PUT',
                 headers: {
                     'Content-type' : 'application/json',

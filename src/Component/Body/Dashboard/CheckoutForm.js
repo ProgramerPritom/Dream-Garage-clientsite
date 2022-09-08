@@ -16,7 +16,7 @@ const CheckoutForm = ({bookingPayment}) => {
     const {price , email,name,value,_id} = bookingPayment;
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/create-payment-intent',{
+        fetch('https://whispering-meadow-28819.herokuapp.com/create-payment-intent',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',
@@ -87,7 +87,7 @@ const CheckoutForm = ({bookingPayment}) => {
                 name: name
 
             }
-            fetch(`http://localhost:5000/bookingOrders/${_id}`,{
+            fetch(`https://whispering-meadow-28819.herokuapp.com/bookingOrders/${_id}`,{
                 method: 'PATCH',
                 headers: {
                     'content-type' : 'application/json',

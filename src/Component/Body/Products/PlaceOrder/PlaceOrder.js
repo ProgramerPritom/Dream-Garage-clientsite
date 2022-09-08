@@ -23,7 +23,7 @@ const PlaceOrder = ({data, value, updatePrice}) => {
 
         }
         if (user) {
-            fetch('http://localhost:5000/orders',{
+            fetch('https://whispering-meadow-28819.herokuapp.com/orders',{
                 method :'POST',
                 headers : {
                     'Content-type': 'application/json',

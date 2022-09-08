@@ -1,4 +1,74 @@
-# Getting Started with Create React App
+
+
+
+# Dream Garage
+
+## Description
+This is a Car manufacturer Web site. It's build for car parts manufacturer stock quantity. It's Font-end and Back-end both used. so, that update , create, delete any product stock quantity and others. 
+
+### Client-site Github link
+go to [GitHub link](github.com/programming-hero-web-course1/manufacturer-website-client-side-ProgramerPritom)
+
+### Server-site Github link
+go to [GitHub link](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-ProgramerPritom)
+
+### Live site Link 
+go to [Live view Site](https://dream-motor-garage.web.app/)
+
+## Features
+- Responsive Navbar
+- Slider
+- Banner
+- products 
+- Blogs
+- Manage table
+- Counter
+- payment
+- Footer
+
+## List of technologies
+
+- React
+- React-Bootstrap
+- Firebase
+- React-Router
+- react icon
+- react slick
+- react query
+- NodeJs
+- Mongodb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +137,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

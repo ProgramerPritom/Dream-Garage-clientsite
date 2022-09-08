@@ -48,7 +48,7 @@ const ManageProduct = () => {
             minimumQuantity : productDetails.minimumQuantity,
             description : productDetails.description
         }
-        fetch(`http://localhost:5000/products/${id}`,{
+        fetch(`https://whispering-meadow-28819.herokuapp.com/products/${id}`,{
             method: 'PUT',
             body : JSON.stringify(updateProduct),
             headers: {

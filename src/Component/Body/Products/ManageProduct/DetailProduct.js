@@ -14,7 +14,7 @@ const DetailProduct = () => {
     const {id} = useParams();
     const [data,setData] = useState([]);
     
-    const url = `http://localhost:5000/products/${id}`;
+    const url = `https://whispering-meadow-28819.herokuapp.com/products/${id}`;
     useEffect(()=>{
         fetch(url)
         .then(res => res.json())

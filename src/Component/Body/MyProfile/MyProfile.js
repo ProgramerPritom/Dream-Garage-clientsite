@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
     return (
@@ -52,7 +53,8 @@ const MyProfile = () => {
                     <h2 class="card-title">Gym Equipment</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Live site</button>
+                    <Link to='https://gym-equipment-stock-house.web.app/'><button class="btn btn-primary">Live site</button></Link>
+                    
                     </div>
                 </div>
                 </div>
@@ -64,7 +66,8 @@ const MyProfile = () => {
                     <h2 class="card-title">Dream Garage</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Live site</button>
+                        <Link to='https://dream-motor-garage.web.app/'><button class="btn btn-primary">Live site</button></Link>
+                    
                     </div>
                 </div>
                 </div>
@@ -76,7 +79,8 @@ const MyProfile = () => {
                     <h2 class="card-title">Volunteer Network</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Live site</button>
+                        <Link to='https://volunteer-project-2a0c8.web.app/'><button class="btn btn-primary">Live site</button></Link>
+                    
                     </div>
                 </div>
                 </div>

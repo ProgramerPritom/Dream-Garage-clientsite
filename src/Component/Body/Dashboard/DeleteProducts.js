@@ -5,7 +5,7 @@ const DeleteProducts = ({deleteProduct,isLoading,refetch ,setDeleteProduct}) => 
 // console.log(deleteProduct)
 
     const handleDelete = () =>{
-        fetch(`http://localhost:5000/products/${deleteProduct._id}`,{
+        fetch(`https://whispering-meadow-28819.herokuapp.com/products/${deleteProduct._id}`,{
             method : 'DELETE'
         })
         .then(res => res.json())
